@@ -48,7 +48,7 @@ function enMinusculas(string) {
     //Pasado el string por parámetros tendrás que devolver el mismo contenido del string
     //pero todo en minúsculas
     //tu código: 👇
-    return string.toLowerCase()
+    return string.toLowerCase();
 }
 
 function enlistandoNombres(args) {
@@ -56,7 +56,7 @@ function enlistandoNombres(args) {
     //Ejemplo: Martin, Leonardo, Diego, Franco, Natalia
     //Tendrás que buscar un método el cual sirva para separarlos y crear una lista solo con los nombres!
     //Tu código: 👇
-
+    return args.split(', ');
 }
 
 function typeOF(params) {
@@ -69,18 +69,13 @@ function repairToString(str) {
     //Por parametro se pasará un string, el cual tiene su primera letra en minuscula y la ultima en mayúscula. EJ: "holA"
     //tendras que devolver el string como corresponda -> "Hola"
     //Tu código:👇
-    let txt = str;txt.slice(0, 1);
-    let txt2 = str;txt2.slice(1, str.length);
-    txt.toUpperCase;
-    txt2.toLowerCase;
-    str = txt + txt2;
-    console.log(str);
-    return str;
+    return str.slice(0,1).toUpperCase()+str.slice(1).toLocaleLowerCase();
 }
 repairToString();
 function contains(string) {
     // Por parametros se pasará un string, tendrás que verificar si la cadena de texto contiene la siguiente sub-cadena -> "JavaScript"
     // Tu código:👇
+    return string.includes('JavaScript');
 }
 
 module.exports = {
