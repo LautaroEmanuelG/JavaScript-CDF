@@ -30,7 +30,7 @@ function porcentajeX(chicos, chicas) {
     //puedes hacer una regla de 3 simple.
     // Deberás devolver el porcentaje de chicas que hay en el curso.
     //Tu código 👇:
-    return chicos * (chicas + chicas) / 100, chicas(chicas + chicos) / 100;
+    return chicas*100/(chicas + chicos);
 }
 
 function elevadoAlCubo(num) {
@@ -42,7 +42,7 @@ function elevadoAlCubo(num) {
 function roundUp(num) {
     //Redondea hacia arriba el numero pasado por parámetros 'num', y devuelve su valor
     //Tu código 👇:
-    return Math.ceil(numero);
+    return Math.ceil(num);
 }
 
 function randomNumber() {

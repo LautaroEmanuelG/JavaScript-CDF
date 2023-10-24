@@ -12,21 +12,21 @@ function salario(personal, exp) {
     // mayor o igual a 20 años, el bono es de $15.000. tendrás que retornar un mensaje con el nombre del personal y el bono correspondiente
     // Ejemplo: "Pedro tu bono es de $10.000"
     // Tu código:👇
-    let bono=0;
-    exp<5?bono=5000:(exp<20?bono=1000:bono=15000);
+    let bono = "0";
+    exp < 5 ? bono = "$5.000" : (exp < 20 ? bono = "$1.000" : bono = "$15.000");
     return `${personal} tu bono es de ${bono}`;
 }
 
 function numPar(num) {
     // Retorna true si 'num' es un numero par, casi contrario retorna false
     // Tu código:👇
-    return num%2===0?true:false;
+    return num % 2 === 0 ? true : false;
 }
 
 function numImpar(num) {
     // Retorna true si 'num' es un numero impar, casi contrario retorna false
     // Tu código:👇
-    return num%2!==0?true:false;
+    return num % 2 !== 0 ? true : false;
 }
 
 function numPositivoNegativo(num) {
@@ -34,7 +34,7 @@ function numPositivoNegativo(num) {
     // Positivos -> "El numero es positivo"
     // Negativo -> "El numero es negativo"
     // Tu código:👇
-    return num<0?"El numero es negativo":"El numero es positivo";
+    return num < 0 ? "El numero es negativo" : "El numero es positivo";
 }
 
 function cambioPesos(monto, pago) {
@@ -42,7 +42,7 @@ function cambioPesos(monto, pago) {
     // que si el pago fue en "dólares" o "euros" convertir a pesos argentinos y retornar el resultado.
     //  1 USD = $375  y 1 EUR = $383 . Si el pago fue en 'pesos argentinos', retornar el precio tal cual
     // Tu código:👇
-    pago==="dólares"?monto=monto*375:(pago==="euros"?monto=monto*383:monto);
+    return pago === "dólares" ? monto * 375 : (pago === "euros" ? monto * 383 : monto);
 }
 
 function climaActual(clima) {
@@ -70,29 +70,29 @@ function vocales(char) {
     // Se pasaran varias letras por parámetros, tendrás que comprobar que sea una vocal y retornar el siguiente
     // mensaje "Es vocal"
     // Tu código:👇
-    char=char.toUpperCase();
-    return char==="A" ||char==="E" ||char==="I" ||char==="O" ||char==="U" ? "Es vocal":"No es vocal";
+    charMayus = char.toUpperCase();
+    return char === "A" || char === "E" || char === "I" || char === "O" || char === "U" ? "Es vocal" : false;
 }
 
 function nValor(juan) {
     //Juan tiene N dólares, David tiene la mitad de lo que posee Juan y José la mitad de lo que poseen Juan y David juntos.
     //Retornar el promedio de la cantidad de dinero que tienen entre los tres y redondear hacia arriba
     //Tu código:👇
-    return Math.ceil((juan+juan/2+(juan+juan/2)/2)/3);
+    return Math.ceil((juan + juan / 2 + (juan + juan / 2) / 2) / 3);
 }
 
 function numMúltiplo(num1, num2) {
     //Comprueba si num1 y num2 son múltiplos entre si, en caso de serlos retorna "Son múltiplos",
     //caso contrario retornar "No son múltiplos"
     //Tu código:👇
-    return num1%num2===0?"Son multiplos":"No son multiplos";
+    return num1 % num2 === 0 ? "Son múltiplos" : "No son múltiplos";
 }
 
 function length(str) {
     // Comprueba si 'str' tiene un longitud mayor que 5, de ser así tienes que retornar true
     // caso contrario retornar false.
     // Tu código:👇
-    return str.length>5;
+    return str.length > 5;
 }
 
 module.exports = {
