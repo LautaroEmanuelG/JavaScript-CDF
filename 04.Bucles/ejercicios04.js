@@ -15,9 +15,7 @@ function cantidadDeVocales(phrase) {
 function primerDivisible(divisor, dividendo) {
     // Encuentra el primer número divisible por 'num' a partir de un número dado utilizando un bucle while
     // Tu código:👇
-    while (dividendo % divisor !== 0) {
-        divisor++;
-    }
+    while (dividendo % divisor !== 0) divisor++;
     return divisor;
 }
 
@@ -26,7 +24,7 @@ function encuentraX(x) {
     //Realiza un algoritmo que recorre numeros del 1 al 100, cuando pase por el numero X pasado por parametros
     // retornar "El numero X es: ..."
     // Tu Código:👇
-    for (let i = 1;i<101;i++){
+    for (let i = 1;i<=100;i++){
         if (x===i)return `El numero X es: ${i}`
     }
 }
@@ -39,6 +37,8 @@ function sumandoTodo(num) {
     for (let i = 0 ;i<=num;i++){
         cont+=i;
     }
+    // let cont=0
+    // if (num>0 ) cont+= sumandoTodo(num-1);
     return cont;
 }
 
@@ -53,7 +53,9 @@ function Fibonacci(n) {
     // Realiza una secuencia Fibonacci con el indice pasado por paramentro
     // Se puede representar mediante la siguiente fórmula: F(n) = F(n-1) + F(n-2)
     // Tu código:👇
-    return n===0?n=0:(n===1||n===2?n=1:Fibonacci(n-1)+Fibonacci(n-2));
+    //return n===0?n=0:(n===1||n===2?n=1:Fibonacci(n-1)+Fibonacci(n-2));
+    if(n<= 1)return n
+    return Fibonacci(n-1)+Fibonacci(n-2)
 }
 
 function esPrimo(numero) {
@@ -61,14 +63,23 @@ function esPrimo(numero) {
     //Un número primo es aquel que solo es divisible por 1 y por sí mismo.
     //Si el numero pasado es primo devolve: numero " es primo." , caso contrario: numero " no es primo."
     // Tu código:👇
-
+    for (let i = 2; i < numero; i++) {
+        if (numero % i === 0) return `${numero} no es primo.`;
+    }
+    return `${numero} es primo.`;
 }
 
 function invertirCadena(cadena) {
     //La función toma una cadena de texto como parámetro, devuelve la cadena invertida.
     //Ejemplo: 'Hola' -> devolver 'aloH'
     //Tu codigo:👇
-
+let reves ="";
+letras = cadena.split('');
+for (let i = cadena.length-1; i >= 0; i--) {
+    reves+=letras[i];
+}
+return reves;
+//return.split('')reverse().join('');
 }
 
 module.exports = {

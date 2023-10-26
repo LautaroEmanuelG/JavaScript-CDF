@@ -22,10 +22,17 @@
 // let numeroBinario=111;
 // const numeroDecimal = parseInt(numeroBinario, 2);
 // console.log(numeroDecimal)
-function Fibonacci(n) {
-    // Realiza una secuencia Fibonacci con el indice pasado por paramentro
-    // Se puede representar mediante la siguiente fórmula: F(n) = F(n-1) + F(n-2)
-    // Tu código:👇
-    return n===0?n=0:(n===1||n===2?n=1:Fibonacci(n-1)+Fibonacci(n-2));
+// function Fibonacci(n) {
+//     // Realiza una secuencia Fibonacci con el indice pasado por paramentro
+//     // Se puede representar mediante la siguiente fórmula: F(n) = F(n-1) + F(n-2)
+//     // Tu código:👇
+//     return n===0?n=0:(n===1||n===2?n=1:Fibonacci(n-1)+Fibonacci(n-2));
+// }
+// console.log(Fibonacci(7))
+let pal="aloH";
+let reves ="";
+letras = pal.split('');
+for (let i = pal.length-1; i >= 0; i--) {
+    reves+=letras[i];
 }
-console.log(Fibonacci(7))
+console.log(reves)
