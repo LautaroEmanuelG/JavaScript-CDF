@@ -36,6 +36,22 @@
 //     reves+=letras[i];
 // }
 // console.log(reves)
-let str = "hoLA"
-let palabra = str.slice(0,1).toUpperCase() + str.slice(1).toLocaleLowerCase()
-console.log(str2);
+// let str = "hoLA"
+// let palabra = str.slice(0,1).toUpperCase() + str.slice(1).toLocaleLowerCase()
+// console.log(str2);
+// let arr = [1,1,2,4,5,6,6,7,1,8,9];
+// let arrSinDuplicados = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         console.log(arr[i])
+//         arrSinDuplicados.includes(arr[i])? null : arrSinDuplicados.push(arr[i]);
+//     }
+//     console.log(arrSinDuplicados);
+let matriz = [[1, 2, 4],[7, 9, 8],[7, 10, 11]];
+let matrizTranspuesta = [[]];
+    for (let i = 0; i < matriz.length; i++){
+        for (let j = 0; j < matriz.length; j++){
+            matrizTranspuesta.push(matriz[j][i]);
+        }
+    }
+    console.log(matriz);
+    console.log(matrizTranspuesta);

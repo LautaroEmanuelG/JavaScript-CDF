@@ -22,7 +22,7 @@ function changeArray(arr) {
     //retorna el nuevo valor
     // tu código aqui:
     arr[0] = 'Aprendiendo'
-    arr[arr.length] = 'array'
+    arr[arr.length-1] = 'array'
     return arr;
 }
 
@@ -48,9 +48,9 @@ function sumandoEnUno(arg) {
     // dado el array de numeros enteros pasado por parametro, a cada elemento del array
     // tienes que sumarle 1.. ejemplo: [4 , 5, 6] -> [5 , 6, 7] 
     // tu código aqui:
-    arg.forEach(e => {
-        e+=1;
-    });
+    for (let i = 0; i < arg.length; i++) {
+        arg[i] += 1;
+    }
     return arg;
 }
 
@@ -84,6 +84,11 @@ function eliminarDuplicado(arr) {
     // ejemplo: [1,1,2,4,5,6,6,7,1,8,9] -> [1,2,4,5,6,7,8,9]
     // Tu codigo:
     //return arr.filter((e,i)=>arr.indexOf(e)===i);
+    let arrSinDuplicados = [];
+    for (let i = 0; i < arr.length; i++) {
+        arrSinDuplicados.includes(arr[i])? null : arrSinDuplicados.push(arr[i]);
+    }
+    return arrSinDuplicados;
 }
 
 function enOrden(arr, ascendente = true) {
@@ -104,7 +109,7 @@ function matrizTranspuesta(matriz) {
     //Tu codigo:
     let matrizTranspuesta = [];
     for (let i = 0; i < matriz.length; i++){
-        for (let j = 0; j < matriz[i].length; j++){
+        for (let j = matriz[i].length; j <= 0; j--){
             matrizTranspuesta.push(matriz[j][i]);
         }
     }
