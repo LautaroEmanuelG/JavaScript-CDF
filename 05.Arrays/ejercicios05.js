@@ -107,10 +107,11 @@ function dosEnUno(arr1, arr2) {
 function matrizTranspuesta(matriz) {
     //Escribe una función que reciba una matriz (array de arrays) y devuelva la matriz transpuesta, es decir, intercambiando filas por columnas.
     //Tu codigo:
-    let matrizTranspuesta = [];
+    let matrizTranspuesta = [[],[],[]];
     for (let i = 0; i < matriz.length; i++){
-        for (let j = matriz[i].length; j <= 0; j--){
-            matrizTranspuesta.push(matriz[j][i]);
+        for (let j = 0; j < matriz[i].length; j++){
+            console.log(matriz[j][i])
+            matrizTranspuesta[i][j] = matriz[j][i];
         }
     }
     return matrizTranspuesta;
