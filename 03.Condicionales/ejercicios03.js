@@ -3,7 +3,7 @@ function mayorEdad(personas) {
     //Si son mayores de edad, tienes que retornar "Es mayor de edad", en caso que no cumpla la condición 
     //tendrás que retornar "Es menor de edad"
     //Tu código:👇
-    return personas.edad() >= 18 ? "Es mayor de edad" : "Es menor de edad";
+    return personas >= 18 ? "Es mayor de edad" : "Es menor de edad";
 }
 
 function salario(personal, exp) {
@@ -13,7 +13,7 @@ function salario(personal, exp) {
     // Ejemplo: "Pedro tu bono es de $10.000"
     // Tu código:👇
     let bono = "0";
-    exp < 5 ? bono = "$5.000" : (exp < 20 ? bono = "$1.000" : bono = "$15.000");
+    exp < 5 ? bono = "$5.000" : (exp < 20 ? bono = "$10.000" : bono = "$15.000");
     return `${personal} tu bono es de ${bono}`;
 }
 

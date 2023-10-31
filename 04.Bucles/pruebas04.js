@@ -29,10 +29,13 @@
 //     return n===0?n=0:(n===1||n===2?n=1:Fibonacci(n-1)+Fibonacci(n-2));
 // }
 // console.log(Fibonacci(7))
-let pal="aloH";
-let reves ="";
-letras = pal.split('');
-for (let i = pal.length-1; i >= 0; i--) {
-    reves+=letras[i];
-}
-console.log(reves)
+// let pal="aloH";
+// let reves ="";
+// letras = pal.split('');
+// for (let i = pal.length-1; i >= 0; i--) {
+//     reves+=letras[i];
+// }
+// console.log(reves)
+let str = "hoLA"
+let palabra = str.slice(0,1).toUpperCase() + str.slice(1).toLocaleLowerCase()
+console.log(str2);
