@@ -1,19 +1,19 @@
 function primerElemento(arg) {
     //dado el array pasado por parametro, tendras que devolver el primer elemento
     // tu código:
-    return arg[0]
+    return arg[0];
 }
 
 function ultimoElemento(arg) {
     //dado el array pasado por parametro, tendras que devolver el ultimo elemento
     // tu código aqui:
-    return arg[arg.length - 1]
+    return arg[arg.length - 1];
 }
 
 function nuevoArray(arg) {
     //dado el array pasado por parametro retorna su longitud
     // tu código aqui:
-    return arg.length
+    return arg.length;
 }
 
 function changeArray(arr) {
@@ -22,8 +22,8 @@ function changeArray(arr) {
     //retorna el nuevo valor
     // tu código aqui:
     arr[0] = 'Aprendiendo'
-    arr[arg.length] = 'array'
-    return arr
+    arr[arr.length] = 'array'
+    return arr;
 }
 
 function primerasCondicionales(arg) {
@@ -33,7 +33,15 @@ function primerasCondicionales(arg) {
     // longitud de array menor que 3 retornar: 'Este array es menor a 3'
     // longitud de array igual a 0 retornar: 'Este array no contiene elementos'
     // tu código aqui:
-
+    if (arg.length === 0) {
+        return 'Este array no contiene elementos';
+    } else if (arg.length === 3) {
+        return 'Este array es igual a 3';
+    } else if (arg.length < 3) {
+        return 'Este array es menor a 3';
+    } else if (arg.length > 3) {
+        return 'Este array es mayor a 3';
+    }
 }
 
 function sumandoEnUno(arg) {
@@ -41,57 +49,66 @@ function sumandoEnUno(arg) {
     // tienes que sumarle 1.. ejemplo: [4 , 5, 6] -> [5 , 6, 7] 
     // tu código aqui:
     arg.forEach(e => {
-        e+=1
+        e+=1;
     });
-    return arg
+    return arg;
 }
 
 function valorMaximo(arr) {
     //Se pasa un array de enteros, tendras que iterar por cada elemeto del array y encontrar el valor más alto y devolverlo
     //ejemplo -> [1 , 5, 4, 10, 99 ,2, 42, 3] - deberia devolver 99
     // Tu codigo:
-    return Math.max(arr)
+    return Math.max(...arr);
 }
 
 function valorMinimo(arr) {
     //Se pasa un array de enteros, tendras que iterar por cada elemeto del array y encontrar el valor más bajo y devolverlo
     //ejemplo -> [ 5, 4, 10, 99 ,2, 42, 3] - deberia devolver 2
     // Tu codigo:
-
+    return Math.min(...arr);
 }
 
 function cantPares(arr) {
     //Se para un array de enteros, tienes que iterar por los elementos y contar la cantidad de numeros que son pares
     // devolver la cantidad de pares total. Ejemplo: [1,2,3,4,5,6,7,8,9] -> 4
     // Tu codigo:
-
+    let pares = 0;
+    arr.forEach(e=>{
+        if(e%2===0) pares++
+    })
+    return pares;
 }
 
 function eliminarDuplicado(arr) {
     // Se para un array de enteros, tienes que iterar por los elementos y eliminar los duplicados, y devolver el array nuevo sin duplicado.
     // ejemplo: [1,1,2,4,5,6,6,7,1,8,9] -> [1,2,4,5,6,7,8,9]
     // Tu codigo:
-
+    //return arr.filter((e,i)=>arr.indexOf(e)===i);
 }
 
 function enOrden(arr, ascendente = true) {
     //Se para un array de enteros de forma desordenada, tendras que devolver el mismo array pero de forma ordenada
     //de menor a mayor. ejemplo -> [7, 2, 4, 6, 1, 3, 5] -> [1, 2, 3, 4, 5, 6, 7]
     //Tu codigo:
-
+    return arr.sort((a,b)=>a-b);
 }
 
 function dosEnUno(arr1, arr2) {
     //Escribe una función que reciba dos arrays y devuelva un nuevo array que contenga todos los elementos de ambos arrays, sin duplicados.
     //Tu codigo:
-    // return arr1.concat(arr2);
-
+    return arr1.concat(arr2);
 }
 
 function matrizTranspuesta(matriz) {
     //Escribe una función que reciba una matriz (array de arrays) y devuelva la matriz transpuesta, es decir, intercambiando filas por columnas.
     //Tu codigo:
-
+    let matrizTranspuesta = [];
+    for (let i = 0; i < matriz.length; i++){
+        for (let j = 0; j < matriz[i].length; j++){
+            matrizTranspuesta.push(matriz[j][i]);
+        }
+    }
+    return matrizTranspuesta;
 }
 
 module.exports = {
