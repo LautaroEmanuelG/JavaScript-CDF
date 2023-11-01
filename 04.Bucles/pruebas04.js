@@ -46,12 +46,13 @@
 //         arrSinDuplicados.includes(arr[i])? null : arrSinDuplicados.push(arr[i]);
 //     }
 //     console.log(arrSinDuplicados);
-let matriz = [[1, 2, 4],[7, 9, 8],[7, 10, 11]];
-let matrizTranspuesta = [[]];
-    for (let i = 0; i < matriz.length; i++){
-        for (let j = 0; j < matriz.length; j++){
-            matrizTranspuesta.push(matriz[j][i]);
-        }
-    }
-    console.log(matriz);
-    console.log(matrizTranspuesta);
+// let matriz = [[1, 2, 4],[7, 9, 8],[7, 10, 11]];
+// let matrizTranspuesta = [[],[],[]];
+//     for (let i = 0; i < matriz.length; i++){
+//         for (let j = 0; j < matriz[i].length; j++){
+//             console.log(matriz[j][i])
+//             matrizTranspuesta[i][j] = matriz[j][i];
+//         }
+//     }
+//     console.log(matriz);
+//     console.log(matrizTranspuesta);
