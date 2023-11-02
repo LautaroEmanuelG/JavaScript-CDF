@@ -101,6 +101,10 @@ function enOrden(arr, ascendente = true) {
 function dosEnUno(arr1, arr2) {
     //Escribe una función que reciba dos arrays y devuelva un nuevo array que contenga todos los elementos de ambos arrays, sin duplicados.
     //Tu codigo:
+    //Esta funcion no pasa el ultimo ejemplo del test xq si están repetidos los numeros
+    /*let array = arr1.concat(arr2);
+    console.log(eliminarDuplicado(array));
+    return eliminarDuplicado(array);*/
     return arr1.concat(arr2);
 }
 

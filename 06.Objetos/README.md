@@ -3,7 +3,6 @@
 Un objeto de JavaScript tiene propiedades asociadas a él. Una propiedad de un objeto se puede explicar como una variable adjunta al objeto. Las propiedades de un objeto básicamente son lo mismo que las variables comunes de JavaScript, excepto por el nexo con el objeto.
 
 ### Operaciones comúnes:
-
 - ********************************Crear un Objeto********************************
     
     ```jsx
