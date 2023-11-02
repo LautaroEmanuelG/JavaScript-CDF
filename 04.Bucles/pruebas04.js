@@ -56,3 +56,6 @@
 //     }
 //     console.log(matriz);
 //     console.log(matrizTranspuesta);
+let str = "hoLA"
+let palabra = str.slice(0, 1).toUpperCase() + str.slice(1).toLocaleLowerCase();
+    console.log(palabra)

@@ -69,8 +69,9 @@ function repairToString(str) {
     //Por parametro se pasará un string, el cual tiene su primera letra en minuscula y la ultima en mayúscula. EJ: "holA"
     //tendras que devolver el string como corresponda -> "Hola"
     //Tu código:👇
-    let palabra = str.slice(0,1).toUpperCase()+str.slice(1).toLocaleLowerCase();
-    return palabra
+    //return str.slice(0, 1).toUpperCase() + str.slice(1).toLocaleLowerCase();
+    str = str.toLowerCase();
+    return str[0].toUpperCase() + str.slice(1);
 }
 repairToString();
 function contains(string) {
