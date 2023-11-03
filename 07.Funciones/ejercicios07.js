@@ -32,27 +32,27 @@ function calc(num1, operador, num2) {
 // ejemplo => max = 20 y porcentaje de lluvia = 70 => devolver "El día está lindo, recomendable un paraguas"
 // IMPORTANTE -> la funcion debe llamarse 'temp'    
 // Tu código:
-function temp(max,min,percentLluvia){
+function temp(max, min, percentLluvia) {
     let msj
-    if(max<15){
+    if (max < 15) {
         msj = 'Es recomendable salir con abrigo';
-    }else if(max<26 && min >17){
+    } else if (max < 26 && min > 17) {
         msj = 'El día está lindo';
-    }else if(min>25){
+    } else if (min > 25) {
         msj = 'El día estará caluroso';
     }
-    
-    return percentLluvia > 50 ? `${msj}, recomendable un paraguas`:msj;
+
+    return percentLluvia > 50 ? `${msj}, recomendable un paraguas` : msj;
 }
 /**********************************************************************************/
 
 // Crea una función que reciba un array de strings como parámetro y devuelva un nuevo array con solo los strings que tienen una longitud mayor a 5.
 // IMPORTANTE -> la funcion debe llamarse 'arrayDeStrings'
 // Tu código:
-function arrayDeStrings(arr){
+function arrayDeStrings(arr) {
     let arrFilter
     arr.forEach(word => {
-        if(arr.length > 5) arrFilter.push(word)
+        if (arr.length > 5) arrFilter.push(word)
     });
     return arrFilter;
 }
@@ -60,17 +60,17 @@ function arrayDeStrings(arr){
 // Crea una función que reciba un string como parámetro y devuelva el mismo string pero con todas las palabras en orden inverso.
 // IMPORTANTE -> la funcion debe llamarse 'stringInverso'
 // Tu código:
-function stringInverso(word){
-    return word.split('').reverse().join('')
+function stringInverso(word) {
+    return word.split(' ').reverse().join('')
 }
 /**********************************************************************************/
 // Crea una función que reciba un array de objetos con propiedades "nombre" y "edad" y devuelva el nombre de la persona más joven.
 // IMPORTANTE -> la funcion debe llamarse 'personaMásJoven'
 // Tu código:
-function personaMásJoven(personas){
+function personaMásJoven(personas) {
     let menor;
     personas.forEach(persona => {
-        if(persona.edad < menor){
+        if (persona.edad < menor) {
             menor = persona
         }
     });
@@ -80,45 +80,51 @@ function personaMásJoven(personas){
 // Crea una función que reciba una cadena de texto y devuelva un objeto con la cantidad de veces que aparece cada letra en la cadena.
 // IMPORTANTE -> la funcion debe llamarse 'contadorDeLetras'
 // Tu código:
-function contadorDeLetras(palabra){
-    cantLetras = {
-        a:0,
-        e:0,
-        i:0,
-        o:0,
-        u:0
+function contadorDeLetras(palabra) {
+    var cantLetras = {
+        a: 0,
+        e: 0,
+        i: 0,
+        o: 0,
+        u: 0
     }
+    //Pasamos la palabra a minuscula y la separamos para recorrerla en el foreach
+    palabra = palabra.toLowerCase().split('');
+    //Recorro y agrego vocal al objeto con sus contadores
     palabra.forEach(letra => {
-        palabra = palabra.split('');
         switch (letra) {
-            case a:
-                cantLetras.a +=1
+            case "a":
+                cantLetras.a += 1;
                 break;
-            case e:
-                cantLetras.e +=1
+            case "e":
+                cantLetras.e += 1;
                 break;
-            case i:
-                cantLetras.i +=1
+            case "i":
+                cantLetras.i += 1;
                 break;
-            case o:
-                cantLetras.o +=1
+            case "o":
+                cantLetras.o += 1;
                 break;
-            case u:
-                cantLetras.u +=1
+            case "u":
+                cantLetras.u += 1;
                 break;
             default:
                 break;
         }
-    });
+    })
+    return cantLetras
 }
 /**********************************************************************************/
 // Crea una función que reciba un array de objetos que tiene como propiedades "nombre" y "sueldo" y devuelva el objeto con el sueldo más alto.
 // IMPORTANTE -> la funcion debe llamarse 'sueldoMasAlto'
 // Tu código:
-
-
-
-
+const sueldoMasAlto = (empleados) => {
+    let empMayorSueldo;
+    empleados.forEach(empleado => {
+        if (empleado.sueldo > empMayorSueldo) empMayorSueldo = empleado;
+    })
+    return empMayorSueldo;
+}
 /**********************************************************************************/
 // Crea una función que reciba un array de objetos que tiene como propiedades propiedades "nombre" y "nota" 
 // y devuelva un nuevo array con los nombres de los estudiantes que obtuvieron una nota mayor o igual a 80.
