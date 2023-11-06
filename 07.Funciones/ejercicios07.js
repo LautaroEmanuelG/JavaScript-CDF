@@ -82,35 +82,12 @@ function personaMásJoven(personas) {
 // Tu código:
 function contadorDeLetras(palabra) {
     var cantLetras = {
-        a: 0,
-        e: 0,
-        i: 0,
-        o: 0,
-        u: 0
     }
     //Pasamos la palabra a minuscula y la separamos para recorrerla en el foreach
     palabra = palabra.toLowerCase().split('');
     //Recorro y agrego vocal al objeto con sus contadores
     palabra.forEach(letra => {
-        switch (letra) {
-            case "a":
-                cantLetras.a += 1;
-                break;
-            case "e":
-                cantLetras.e += 1;
-                break;
-            case "i":
-                cantLetras.i += 1;
-                break;
-            case "o":
-                cantLetras.o += 1;
-                break;
-            case "u":
-                cantLetras.u += 1;
-                break;
-            default:
-                break;
-        }
+        
     })
     return cantLetras
 }
@@ -130,10 +107,13 @@ const sueldoMasAlto = (empleados) => {
 // y devuelva un nuevo array con los nombres de los estudiantes que obtuvieron una nota mayor o igual a 80.
 // IMPORTANTE -> la funcion debe llamarse 'aprobados'
 // Tu código:
-
-
-
-
+const aprobados = (estudiantes) => {
+    let aprobados=[];
+    for (let i = 0; i < estudiantes.length; i++) {
+    if (estudiantes[i].nota > 80) aprobados.push(estudiantes[i].nombre);
+    }
+    return aprobados;
+}
 /**********************************************************************************/
 
 module.exports = {
