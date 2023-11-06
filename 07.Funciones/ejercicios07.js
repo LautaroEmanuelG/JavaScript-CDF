@@ -87,7 +87,7 @@ function contadorDeLetras(palabra) {
     palabra = palabra.toLowerCase().split('');
     //Recorro y agrego vocal al objeto con sus contadores
     palabra.forEach(letra => {
-        
+        REHACER
     })
     return cantLetras
 }
