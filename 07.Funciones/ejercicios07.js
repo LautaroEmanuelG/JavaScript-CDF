@@ -50,9 +50,10 @@ function temp(max, min, percentLluvia) {
 // IMPORTANTE -> la funcion debe llamarse 'arrayDeStrings'
 // Tu código:
 function arrayDeStrings(arr) {
-    let arrFilter
+    let arrFilter = [];
     arr.forEach(word => {
-        if (arr.length > 5) arrFilter.push(word)
+        //MAYOR IGUAL A 5, NO MAYOR
+        if (word.length >= 5) arrFilter.push(word);
     });
     return arrFilter;
 }
@@ -61,33 +62,37 @@ function arrayDeStrings(arr) {
 // IMPORTANTE -> la funcion debe llamarse 'stringInverso'
 // Tu código:
 function stringInverso(word) {
-    return word.split(' ').reverse().join('')
+    return word.split('').reverse().join('')
 }
 /**********************************************************************************/
 // Crea una función que reciba un array de objetos con propiedades "nombre" y "edad" y devuelva el nombre de la persona más joven.
 // IMPORTANTE -> la funcion debe llamarse 'personaMásJoven'
 // Tu código:
-function personaMásJoven(personas) {
-    let menor;
+const personaMásJoven= (personas) => {
+    let menor = {edad: 1000};
     personas.forEach(persona => {
-        if (persona.edad < menor) {
-            menor = persona
-        }
+        if (persona.edad < menor.edad) menor = persona;
     });
-    return menor;
+    return menor.nombre;
 }
 /**********************************************************************************/
 // Crea una función que reciba una cadena de texto y devuelva un objeto con la cantidad de veces que aparece cada letra en la cadena.
 // IMPORTANTE -> la funcion debe llamarse 'contadorDeLetras'
 // Tu código:
 function contadorDeLetras(palabra) {
-    var cantLetras = {
-    }
+    var cantLetras = {}
     //Pasamos la palabra a minuscula y la separamos para recorrerla en el foreach
     palabra = palabra.toLowerCase().split('');
     //Recorro y agrego vocal al objeto con sus contadores
     palabra.forEach(letra => {
-        REHACER
+        //console.log(cantLetras[letra])
+        //Devuelve el valor si existe la clave en el objeto
+        //Sino devuelve undefined y lo toma como false
+        if (cantLetras[letra]) {
+            cantLetras[letra] += 1;
+        } else {
+            cantLetras[letra] = 1;
+        }
     })
     return cantLetras
 }
@@ -96,9 +101,9 @@ function contadorDeLetras(palabra) {
 // IMPORTANTE -> la funcion debe llamarse 'sueldoMasAlto'
 // Tu código:
 const sueldoMasAlto = (empleados) => {
-    let empMayorSueldo;
+    let empMayorSueldo= {sueldo: 0};
     empleados.forEach(empleado => {
-        if (empleado.sueldo > empMayorSueldo) empMayorSueldo = empleado;
+        if (empleado.sueldo > empMayorSueldo.sueldo) empMayorSueldo = empleado;
     })
     return empMayorSueldo;
 }
@@ -108,9 +113,9 @@ const sueldoMasAlto = (empleados) => {
 // IMPORTANTE -> la funcion debe llamarse 'aprobados'
 // Tu código:
 const aprobados = (estudiantes) => {
-    let aprobados=[];
+    let aprobados = [];
     for (let i = 0; i < estudiantes.length; i++) {
-    if (estudiantes[i].nota > 80) aprobados.push(estudiantes[i].nombre);
+        if (estudiantes[i].nota > 80) aprobados.push(estudiantes[i].nombre);
     }
     return aprobados;
 }
