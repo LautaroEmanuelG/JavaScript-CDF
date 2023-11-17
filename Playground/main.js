@@ -1,7 +1,10 @@
 const div = document.querySelector("#contenedor")
+const btn = document.querySelector("#btn")
 
-function enviarMsj(nombre){
-    const name = document.getElementById('name')
-    alert(name.value)
-    div.innerHTML += `Bienvenido a mi primera modif de ${nombre}`
-}
+btn.addEventListener("click", () => {
+    div.innerHTML += `
+    <h2>Hola Mundo</h2>
+    <>Hola Mundo</>
+    <h2>Hola Mundo</h2>
+    `
+})

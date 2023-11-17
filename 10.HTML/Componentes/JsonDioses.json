@@ -1,0 +1,62 @@
+[
+    {
+      "name:": "Zeus",
+      "power:": "Cielo y truenos",
+      "descendant:": "100",
+      "pair:": "Hera"
+    },
+    {
+      "name:": "Odin",
+      "power:": "Sabiduría, guerra y muerte",
+      "descendant:": "2",
+      "pair:": "Frigg"
+    },
+    {
+      "name:": "Júpiter",
+      "power:": "Cielo y truenos",
+      "descendant:": "67",
+      "pair:": "Juno"
+    },
+    {
+      "name:": "Thor",
+      "power:": "Truenos y protección",
+      "descendant:": "3",
+      "pair:": "Sif"
+    },
+    {
+      "name:": "Poseidón",
+      "power:": "Mares y terremotos",
+      "descendant:": "63",
+      "pair:": "Anfitrite"
+    },
+    {
+      "name:": "Neptuno",
+      "power:": "Mares y terremotos",
+      "descendant:": "56",
+      "pair:": "Salacia"
+    },
+    {
+      "name:": "Hades",
+      "power:": "Inframundo y muerte",
+      "descendant:": "2",
+      "pair:": "Perséfone"
+    },
+    {
+      "name:": "Plutón",
+      "power:": "Inframundo y muerte",
+      "descendant:": "2",
+      "pair:": "Proserpina"
+    },
+    {
+      "name:": "Apolo",
+      "power:": "Arte, música y profecía",
+      "descendant:": "57",
+      "pair:": "Dafne"
+    },
+    {
+      "name:": "Loki",
+      "power:": "Travesuras y engaños",
+      "descendant:": "6",
+      "pair:": "Sigyn"
+    }
+  ]
